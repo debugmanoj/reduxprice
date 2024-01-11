@@ -46,7 +46,7 @@ function Card() {
                       
                       </div>
                     </div>
-                    <Price/>
+           
                   </div>
                 </div>
               </div>

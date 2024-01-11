@@ -5,8 +5,9 @@ import {handleTotal } from '../redux/CartInfo';
 function Price() {
   let dispatch = useDispatch()
   let Cart = useSelector(state=>state.Cart)
-  console.log(Cart);
-
+  useEffect(() => {
+    dispatch(handleTotal());
+  }, [dispatch]);
   useEffect(()=>{
    let a= dispatch(handleTotal())
    console.log(a);
@@ -15,7 +16,7 @@ function Price() {
     //   total+=val.total
     // })))
     // setTotal(total)
-  })
+  },[])
   return  <div className="col-lg-4 bg-grey">
   <div className="p-5">
     <h3 className="fw-bold mb-5 mt-2 pt-1">Summary</h3>

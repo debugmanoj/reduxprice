@@ -159,16 +159,12 @@ export const cartInfo = createSlice({
             }));
           },
           handleTotal:(state,action)=>{
-            console.log(action);
-            
-            // console.log(state);
-            // let total=0;
-            // state.map((item)=>(item.products.map((val)=>{
-            //  console.log(val.total
-            //     );//   total+=val.total
-            // })))
-            
-            // return total
+            let total=0;
+            state.map((item)=>(item.products.map((val)=>{
+               total+=val.total
+            })))
+            console.log(total);
+            return total
           }
           
     }
